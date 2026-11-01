@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Collaboration Community (RCC)</title>
+  <meta name="description" content="Ten peer-reviewed, open-access international journals in mathematics, business, education, health, law, and community service, published by RCC, IORA, and CRP.">
+  <meta name="theme-color" content="#0a1e6e">
+  <meta property="og:title" content="Research Collaboration Community (RCC)">
+  <meta property="og:description" content="Find the right journal for your research: ten SINTA-accredited, open-access journals.">
+  <meta property="og:image" content="/assets/rcc-logo-white-bg.png">
+  <link rel="icon" href="/assets/rcc-logo.png">
+  <link rel="preload" href="/assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/assets/rcc-logo.png" alt="" width="48" height="44">
+      <span class="brand-name">Research Collaboration Community<small>RCC, IORA, and CRP journals</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#journals">Journals</a>
+      <a href="/#calendar">Publishing calendar</a>
+      <a href="/#indexing">Indexing</a>
+      <a href="/#events">Workshops</a>
+      <a href="/team">Management team</a>
+      <a class="btn btn-primary" href="/#journals">Submit a manuscript</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero: search first -->
+  <section class="hero" aria-labelledby="hero-title">
+    <svg class="swoosh" viewBox="0 0 760 260" fill="none" aria-hidden="true">
+      <path d="M10 250 C 220 230, 430 150, 750 20" stroke="#c8312c" stroke-width="3" opacity=".9"/>
+      <path d="M60 258 C 270 240, 470 168, 756 52" stroke="#c8312c" stroke-width="2" opacity=".55"/>
+      <path d="M120 262 C 320 250, 510 188, 760 86" stroke="#ffffff" stroke-width="1.5" opacity=".18"/>
+    </svg>
+    <div class="wrap">
+      <h1 id="hero-title">Find the right journal for your research.</h1>
+      <p class="hero-lede">Ten peer-reviewed, open-access journals in mathematics, business, education, health, law, and community service, published by RCC, IORA, and CRP.</p>
+
+      <form class="search" id="search-form" role="search" action="/#journals">
+        <div class="search-box">
+          <label for="q">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <span class="visually-hidden">Search journals by title, subject, or acronym</span>
+            <input id="q" name="q" type="search" autocomplete="off" placeholder="Subject or journal name">
+          </label>
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+        <div class="search-filters" role="group" aria-label="Filter by SINTA accreditation">
+          <span>Accreditation:</span>
+          <button class="chip" type="button" data-sinta="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-sinta="2" aria-pressed="false">SINTA 2</button>
+          <button class="chip" type="button" data-sinta="4" aria-pressed="false">SINTA 4</button>
+          <button class="chip" type="button" data-sinta="5" aria-pressed="false">SINTA 5</button>
+        </div>
+        <p class="search-hint">Popular subjects:
+          <button type="button" data-suggest="operations research">operations research</button>,
+          <button type="button" data-suggest="education">education</button>,
+          <button type="button" data-suggest="economics">economics</button>,
+          <button type="button" data-suggest="statistics">statistics</button>,
+          <button type="button" data-suggest="health">health</button>
+        </p>
+      </form>
+
+      <div class="facts">
+        <div><strong>10</strong>international journals</div>
+        <div><strong>9</strong>accredited by SINTA</div>
+        <div><strong>40</strong>issues every year</div>
+        <div><strong>2019</strong>founded in Bandung</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entry paths -->
+  <section class="section" aria-label="What you can do here">
+    <div class="wrap">
+      <div class="paths">
+        <div class="path">
+          <h3>Find a journal</h3>
+          <p>Compare scope, accreditation, issue months, and fees for all ten journals in one list.</p>
+          <a href="#journals">Browse the journals</a>
+        </div>
+        <div class="path">
+          <h3>Submit a manuscript</h3>
+          <p>Read the author guidelines of your chosen journal and submit through its online system.</p>
+          <a href="https://wa.me/6285287694386" target="_blank" rel="noopener">Ask an editor on WhatsApp</a>
+        </div>
+        <div class="path">
+          <h3>Host a workshop</h3>
+          <p>Bring our scientific-writing and publication coaching to your campus or faculty.</p>
+          <a href="#events">See recent workshops</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journal directory -->
+  <section class="section section-mist" id="journals" aria-labelledby="journals-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 id="journals-title">Our journals</h2>
+          <p>Every journal is open access, peer reviewed, and assigns a Crossref DOI to each article.</p>
+        </div>
+      </div>
+      <div class="dir-status" id="dir-status" aria-live="polite"></div>
+      <ul class="journal-list" id="journal-list"></ul>
+    </div>
+  </section>
+
+  <!-- Publishing calendar (signature) -->
+  <section class="section calendar-section" id="calendar" aria-labelledby="calendar-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 id="calendar-title">A new issue every month</h2>
+          <p>Each journal publishes four times a year, and the schedules interlock, so there is always an issue closing soon. Plan your submission around the month you need.</p>
+        </div>
+      </div>
+      <div class="now-strip">
+        <div>
+          <h3 id="now-title">Publishing this month</h3>
+          <ul id="now-list"></ul>
+        </div>
+        <div>
+          <h3 id="next-title">Next month</h3>
+          <ul id="next-list"></ul>
+        </div>
+      </div>
+      <p class="cal-swipe">Swipe the table sideways to see all twelve months.</p>
+      <div class="cal-scroll" tabindex="0" aria-label="Publishing calendar, scrollable">
+        <table class="cal" id="cal"></table>
+      </div>
+      <p class="cal-note">Contact the editor of each journal for its submission deadline.</p>
+    </div>
+  </section>
+
+  <!-- Indexing & policies -->
+  <section class="section" id="indexing" aria-labelledby="indexing-title">
+    <div class="wrap indexing">
+      <div>
+        <h2 id="indexing-title">Indexed where researchers look</h2>
+        <p>Our articles are discoverable through national and international indexes, and every journal follows the same editorial standards.</p>
+        <ul class="policy-list">
+          <li>Peer review before every acceptance decision</li>
+          <li>Open access, free to read for everyone</li>
+          <li>DOI registered with Crossref for every article</li>
+          <li>APA referencing style across all journals</li>
+          <li>Four issues a year on a fixed schedule</li>
+        </ul>
+      </div>
+      <div class="index-grid">
+        <div><strong>SINTA</strong><span>9 of 10 journals accredited</span></div>
+        <div><strong>Google Scholar</strong><span>All journals</span></div>
+        <div><strong>Dimensions</strong><span>All journals</span></div>
+        <div><strong>Crossref</strong><span>DOI for every article</span></div>
+        <div><strong>Copernicus</strong><span>All journals</span></div>
+        <div><strong>Garuda</strong><span>RCC and IORA journals</span></div>
+        <div><strong>WorldCat</strong><span>RCC and IORA journals</span></div>
+        <div><strong>ROAD</strong><span>RCC and IORA journals</span></div>
+        <div><strong>DOAJ</strong><span>IJBESD, also in EBSCO</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshops & webinars -->
+  <section class="section section-mist" id="events" aria-labelledby="events-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 id="events-title">Workshops and webinars</h2>
+          <p>We help researchers move from data to a published article, through free webinars and on-campus coaching with partner universities.</p>
+        </div>
+      </div>
+      <div class="events">
+        <article class="event-feature">
+          <span class="tag">Upcoming, free</span>
+          <h3>Data processing in SPSS with the help of AI</h3>
+          <p>A practical webinar on preparing and analysing research data in SPSS, using AI tools for modern research. Delivered in Bahasa Indonesia.</p>
+          <dl>
+            <dt>Date</dt><dd>Wednesday, 4 November 2026</dd>
+            <dt>Time</dt><dd>19:00 to 21:00 WIB</dd>
+            <dt>Speaker</dt><dd>Dr. Hilda Azkiyah Surya</dd>
+          </dl>
+          <a class="btn btn-primary" href="https://www.instagram.com/rcc.academic/" target="_blank" rel="noopener">Register on Instagram</a>
+        </article>
+        <div>
+          <ul class="event-list">
+            <li>
+              <div class="event-date"><strong>21</strong><span>Oct 2026</span></div>
+              <div><h3>Using AI tools for research and scientific writing (series 1)</h3><p>Webinar with Dr. Moch Panji Agung Saputra</p></div>
+            </li>
+            <li>
+              <div class="event-date"><strong>1–2</strong><span>Oct 2026</span></div>
+              <div><h3>Workshop and coaching clinic: publishing in Scopus-indexed journals</h3><p>UP3M FMIPA, Universitas Pakuan, Bogor</p></div>
+            </li>
+            <li>
+              <div class="event-date"><strong>2</strong><span>Jun 2026</span></div>
+              <div><h3>Scientific article writing workshop</h3><p>With Universitas Muhammadiyah Sukabumi</p></div>
+            </li>
+          </ul>
+          <p class="institution-cta">Want a workshop for your faculty? <a href="https://wa.me/6285287694386" target="_blank" rel="noopener">Contact us on WhatsApp</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" aria-labelledby="about-title">
+    <div class="wrap about">
+      <img src="/assets/rcc-logo.png" alt="Research Collaboration Community logo" width="160" height="146">
+      <div>
+        <h2 id="about-title">About Research Collaboration Community</h2>
+        <p>Research Collaboration Community (Rescollacomm) was founded in Bandung on 25 May 2019 to advance quantitative research and mathematical modeling in Indonesia. Today it manages ten international journals across three publishing units, RCC, IORA, and CRP, and runs writing workshops with universities across the country.</p>
+      </div>
+      <div class="about-actions">
+        <a class="btn btn-ghost" href="/team">Meet the management team</a>
+        <a class="btn btn-ghost" href="#contact">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/rcc-logo.png" alt="" width="56" height="56">
+        <div>
+          <strong>Research Collaboration Community</strong>
+          <address>
+            Jl. Riung Ampuh No. 3, Riung Bandung<br>
+            Bandung 40295, West Java, Indonesia<br>
+            <a href="mailto:ejournalrescollacomm@gmail.com">ejournalrescollacomm@gmail.com</a><br>
+            <a href="https://wa.me/6285287694386" target="_blank" rel="noopener">WhatsApp +62 852-8769-4386</a>
+          </address>
+        </div>
+      </div>
+      <div>
+        <h2>RCC journals</h2>
+        <ul>
+          <li><a href="https://journal.rescollacomm.com/index.php/ijbesd/index">IJBESD</a></li>
+          <li><a href="https://journal.rescollacomm.com/index.php/ijrcs/index">IJRCS</a></li>
+          <li><a href="https://journal.rescollacomm.com/index.php/ijqrm/index">IJQRM</a></li>
+          <li><a href="https://journal.rescollacomm.com/index.php/ijeer/index">IJEER</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>CRP journals</h2>
+        <ul>
+          <li><a href="https://ejournal.corespub.com/index.php/ijmsc/index">IJMSC</a></li>
+          <li><a href="https://ejournal.corespub.com/index.php/ijlcb/index">IJLCB</a></li>
+          <li><a href="https://ejournal.corespub.com/index.php/ijhlp/index">IJHLP</a></li>
+          <li><a href="https://ejournal.corespub.com/index.php/ijhms/index">IJHMS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>IORA journals</h2>
+        <ul>
+          <li><a href="https://www.iorajournal.org/index.php/ijgor/index">IJGOR</a></li>
+          <li><a href="https://www.iorajournal.org/index.php/orics">ORICS</a></li>
+        </ul>
+        <h2 style="margin-top:24px">Follow us</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/rcc.academic/">Instagram @rcc.academic</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Research Collaboration Community. Articles are published open access.</span>
+      <a href="/team">Management team</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/journals.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
