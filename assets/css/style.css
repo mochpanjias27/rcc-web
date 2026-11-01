@@ -154,21 +154,29 @@ p { margin: 0; }
 .section-head h2 { font-size: clamp(1.7rem, 3.4vw, var(--fs-2xl)); }
 .section-head p { color: var(--muted); max-width: 56ch; margin-top: 8px; }
 
-/* ---------- Paths ---------- */
-.paths { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--navy); }
-.path { padding: 28px 28px 32px 0; }
-.path + .path { padding-left: 28px; border-left: 1px solid var(--line); }
-.path h3 { font-size: var(--fs-lg); color: var(--navy); }
-.path p { color: var(--muted); margin-top: 10px; max-width: 34ch; }
-.path a { display: inline-block; margin-top: 16px; font-weight: 600; font-size: var(--fs-sm); }
-@media (max-width: 760px) {
-  .paths { grid-template-columns: 1fr; }
-  .path, .path + .path { padding: 24px 0; border-left: 0; }
-  .path + .path { border-top: 1px solid var(--line); }
+/* ---------- What we do ---------- */
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--navy); }
+.service { display: flex; flex-direction: column; gap: 10px; padding: 28px 32px 8px 0; }
+.service + .service { padding-left: 32px; border-left: 1px solid var(--line); }
+.service-icon { color: var(--red); margin-bottom: 6px; }
+.service h3 { font-size: var(--fs-lg); color: var(--navy); }
+.service-id { font-family: var(--serif); font-style: italic; color: var(--muted); margin-top: -6px; }
+.service > p:not(.service-id) { color: var(--ink); max-width: 38ch; }
+.service-tags { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.service-tags li { font-size: var(--fs-xs); background: var(--mist); color: var(--navy); font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+.service-facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 4px 0 0; font-size: var(--fs-sm); }
+.service-facts dt { color: var(--muted); }
+.service-facts dd { margin: 0; font-weight: 600; color: var(--navy); }
+.service-links { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: auto; padding-top: 14px; }
+.service-links a { font-weight: 600; font-size: var(--fs-sm); }
+@media (max-width: 860px) {
+  .services { grid-template-columns: 1fr; }
+  .service, .service + .service { padding: 24px 0; border-left: 0; }
+  .service + .service { border-top: 1px solid var(--line); }
 }
 
 /* ---------- Call for papers ---------- */
-.cfp-section { padding-top: 0; }
+.cfp-section { background: var(--paper); border-top: 1px solid var(--line); }
 .cfp-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 28px; }
 .cfp-card { display: flex; flex-direction: column; border-top: 2px solid var(--navy); padding-top: 18px; }
 .cfp-poster { display: block; border-radius: var(--radius-s); overflow: hidden; border: 1px solid var(--line); aspect-ratio: 710 / 902; background: var(--mist); }
