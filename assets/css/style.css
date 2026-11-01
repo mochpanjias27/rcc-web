@@ -395,3 +395,24 @@ mark { background: var(--red-soft); color: inherit; padding: 0 1px; border-radiu
   .brand img { width: 40px; }
   .brand-name { white-space: normal; font-size: 1rem; }
 }
+
+/* ---------- Language switch ---------- */
+.lang-switch { display: inline-flex; flex: none; border: 1.5px solid var(--line); border-radius: 999px; padding: 2px; margin-left: 4px; }
+.lang-switch button { font: 600 var(--fs-xs)/1 var(--sans); color: var(--muted); background: transparent; border: 0; border-radius: 999px; padding: 7px 10px; cursor: pointer; letter-spacing: .03em; }
+.lang-switch button:hover { color: var(--navy); }
+.lang-switch button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+@media (max-width: 1140px) {
+  .lang-switch { margin-left: auto; order: 2; }
+  .nav-toggle { margin-left: 8px; order: 3; }
+}
+/* In Indonesian, headings are already Indonesian; drop the Indonesian subtitles */
+html[lang="id"] .service-id,
+html[lang="id"] .event-orig,
+html[lang="id"] .event-list p[lang="id"] { display: none; }
+@media (max-width: 480px) {
+  .site-header .wrap { gap: 12px; }
+  .brand-name small { display: none; }
+  .brand-name { font-size: 0.95rem; line-height: 1.15; }
+  .lang-switch button { padding: 7px 8px; }
+  .nav-toggle { padding: 8px 10px; }
+}

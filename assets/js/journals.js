@@ -12,6 +12,7 @@ window.RCC_JOURNALS = [
     months: [2, 5, 8, 11],
     apc: 150,
     subjects: ["Business and management", "Economics", "Social and community development"],
+    subjectsId: ["Bisnis dan manajemen", "Ekonomi", "Pembangunan sosial dan masyarakat"],
     extraIndex: ["DOAJ", "EBSCO", "Garuda", "WorldCat", "ROAD"]
   },
   {
@@ -26,6 +27,7 @@ window.RCC_JOURNALS = [
     months: [1, 4, 7, 10],
     apc: 70,
     subjects: ["Community service", "Technology product development", "Training and economic empowerment"],
+    subjectsId: ["Pengabdian masyarakat", "Pengembangan produk teknologi", "Pelatihan dan pemberdayaan ekonomi"],
     extraIndex: ["Garuda", "WorldCat", "ROAD"]
   },
   {
@@ -40,6 +42,7 @@ window.RCC_JOURNALS = [
     months: [1, 4, 7, 10],
     apc: 70,
     subjects: ["Mathematics", "Statistics", "Data science", "Computing and AI"],
+    subjectsId: ["Matematika", "Statistika", "Sains data", "Komputasi dan AI"],
     extraIndex: []
   },
   {
@@ -52,6 +55,7 @@ window.RCC_JOURNALS = [
     months: [3, 6, 9, 12],
     apc: 70,
     subjects: ["Linguistics", "Communication", "Broadcasting and media"],
+    subjectsId: ["Linguistik", "Komunikasi", "Penyiaran dan media"],
     extraIndex: []
   },
   {
@@ -64,6 +68,7 @@ window.RCC_JOURNALS = [
     months: [3, 6, 9, 12],
     apc: 70,
     subjects: ["Quantitative research", "Mathematical modeling", "Operations research"],
+    subjectsId: ["Riset kuantitatif", "Pemodelan matematika", "Riset operasi"],
     extraIndex: ["Garuda", "WorldCat", "ROAD"]
   },
   {
@@ -78,6 +83,7 @@ window.RCC_JOURNALS = [
     months: [1, 4, 7, 10],
     apc: 70,
     subjects: ["Ethnosciences", "Educational research", "Educational psychology and technology"],
+    subjectsId: ["Etnosains", "Riset pendidikan", "Psikologi dan teknologi pendidikan"],
     extraIndex: ["Garuda", "WorldCat", "ROAD"]
   },
   {
@@ -92,6 +98,7 @@ window.RCC_JOURNALS = [
     months: [2, 5, 8, 11],
     apc: 70,
     subjects: ["Operations research", "Optimization", "Risk management", "Industrial engineering"],
+    subjectsId: ["Riset operasi", "Optimisasi", "Manajemen risiko", "Teknik industri"],
     extraIndex: ["Garuda", "WorldCat", "ROAD"]
   },
   {
@@ -104,6 +111,7 @@ window.RCC_JOURNALS = [
     months: [3, 6, 9, 12],
     apc: 70,
     subjects: ["Humanities", "Law", "Political science"],
+    subjectsId: ["Humaniora", "Hukum", "Ilmu politik"],
     extraIndex: []
   },
   {
@@ -116,6 +124,7 @@ window.RCC_JOURNALS = [
     months: [3, 6, 9, 12],
     apc: 50,
     subjects: ["Conference proceedings", "Operations research", "Applied mathematics"],
+    subjectsId: ["Prosiding konferensi", "Riset operasi", "Matematika terapan"],
     extraIndex: ["Garuda", "WorldCat", "ROAD"]
   },
   {
@@ -130,6 +139,7 @@ window.RCC_JOURNALS = [
     months: [2, 5, 8, 11],
     apc: 50,
     subjects: ["Public health", "Medicine and pharmacy", "Sports science"],
+    subjectsId: ["Kesehatan masyarakat", "Kedokteran dan farmasi", "Ilmu keolahragaan"],
     extraIndex: []
   }
 ];

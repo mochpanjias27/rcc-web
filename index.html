@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research Collaboration Community (RCC)</title>
-  <meta name="description" content="Ten peer-reviewed, open-access international journals in mathematics, business, education, health, law, and community service, published by RCC, IORA, and CRP.">
+  <title data-i18n="meta.title.home">Research Collaboration Community (RCC)</title>
+  <meta name="description" data-i18n-attr="content:meta.desc.home" content="Ten peer-reviewed, open-access international journals in mathematics, business, education, health, law, and community service, published by RCC, IORA, and CRP.">
   <meta name="theme-color" content="#0a1e6e">
   <meta property="og:title" content="Research Collaboration Community (RCC)">
   <meta property="og:description" content="Find the right journal for your research: ten SINTA-accredited, open-access journals.">
@@ -12,26 +12,29 @@
   <link rel="icon" href="/assets/rcc-logo.png">
   <link rel="preload" href="/assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20261102g">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261102h">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">
       <img src="/assets/rcc-logo.png" alt="" width="48" height="44">
-      <span class="brand-name">Research Collaboration Community<small>RCC, IORA, and CRP journals</small></span>
+      <span class="brand-name">Research Collaboration Community<small data-i18n="brand.sub">RCC, IORA, and CRP journals</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="/#journals">Journals</a>
-      <a href="/#calendar">Publishing calendar</a>
-      <a href="/#call-for-papers">Call for papers</a>
-      <a href="/#events">Workshops</a>
-      <a href="/team">Management team</a>
-      <a class="btn btn-primary" href="/#journals">Submit a manuscript</a>
+    <nav class="nav" id="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <a href="/#journals" data-i18n="nav.journals">Journals</a>
+      <a href="/#call-for-papers" data-i18n="nav.cfp">Call for papers</a>
+      <a href="/#events" data-i18n="nav.events">Workshops</a>
+      <a href="/team" data-i18n="nav.team">Management team</a>
+      <a class="btn btn-primary" href="/#journals" data-i18n="nav.submit">Submit a manuscript</a>
     </nav>
+    <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en" title="English">EN</button>
+      <button type="button" data-lang="id" aria-pressed="false" lang="id" title="Bahasa Indonesia">ID</button>
+    </div>
   </div>
 </header>
 
@@ -45,39 +48,33 @@
       <path d="M120 262 C 320 250, 510 188, 760 86" stroke="#ffffff" stroke-width="1.5" opacity=".18"/>
     </svg>
     <div class="wrap">
-      <h1 id="hero-title">Find the right journal for your research.</h1>
-      <p class="hero-lede">Ten peer-reviewed, open-access journals in mathematics, business, education, health, law, and community service, published by RCC, IORA, and CRP.</p>
+      <h1 id="hero-title" data-i18n="hero.title">Find the right journal for your research.</h1>
+      <p class="hero-lede" data-i18n="hero.lede">Ten peer-reviewed, open-access journals in mathematics, business, education, health, law, and community service, published by RCC, IORA, and CRP.</p>
 
       <form class="search" id="search-form" role="search" action="/#journals">
         <div class="search-box">
           <label for="q">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <span class="visually-hidden">Search journals by title, subject, or acronym</span>
-            <input id="q" name="q" type="search" autocomplete="off" placeholder="Subject or journal name">
+            <span class="visually-hidden" data-i18n="search.label">Search journals by title, subject, or acronym</span>
+            <input id="q" name="q" type="search" autocomplete="off" placeholder="Subject or journal name" data-i18n-attr="placeholder:search.placeholder">
           </label>
-          <button class="btn btn-primary" type="submit">Search</button>
+          <button class="btn btn-primary" type="submit" data-i18n="search.button">Search</button>
         </div>
-        <div class="search-filters" role="group" aria-label="Filter by SINTA accreditation">
-          <span>Accreditation:</span>
-          <button class="chip" type="button" data-sinta="all" aria-pressed="true">All</button>
+        <div class="search-filters" role="group" aria-label="Filter by SINTA accreditation" data-i18n-attr="aria-label:filter.label">
+          <span data-i18n="filter.title">Accreditation:</span>
+          <button class="chip" type="button" data-sinta="all" aria-pressed="true" data-i18n="filter.all">All</button>
           <button class="chip" type="button" data-sinta="2" aria-pressed="false">SINTA 2</button>
           <button class="chip" type="button" data-sinta="4" aria-pressed="false">SINTA 4</button>
           <button class="chip" type="button" data-sinta="5" aria-pressed="false">SINTA 5</button>
         </div>
-        <p class="search-hint">Popular subjects:
-          <button type="button" data-suggest="operations research">operations research</button>,
-          <button type="button" data-suggest="education">education</button>,
-          <button type="button" data-suggest="economics">economics</button>,
-          <button type="button" data-suggest="statistics">statistics</button>,
-          <button type="button" data-suggest="health">health</button>
-        </p>
+        <p class="search-hint" data-i18n="search.hint">Popular subjects: <button type="button" data-suggest="operations research">operations research</button>, <button type="button" data-suggest="education">education</button>, <button type="button" data-suggest="economics">economics</button>, <button type="button" data-suggest="statistics">statistics</button>, <button type="button" data-suggest="health">health</button></p>
       </form>
 
       <div class="facts">
-        <div><strong>10</strong>international journals</div>
-        <div><strong>9</strong>accredited by SINTA</div>
-        <div><strong>40</strong>issues every year</div>
-        <div><strong>2019</strong>founded in Bandung</div>
+        <div data-i18n="fact.journals"><strong>10</strong>international journals</div>
+        <div data-i18n="fact.sinta"><strong>9</strong>accredited by SINTA</div>
+        <div data-i18n="fact.issues"><strong>40</strong>issues every year</div>
+        <div data-i18n="fact.founded"><strong>2019</strong>founded in Bandung</div>
       </div>
     </div>
   </section>
@@ -87,48 +84,48 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="services-title">What we do</h2>
-          <p>RCC supports learners and researchers at every stage, from school mathematics to an article in an international journal.</p>
+          <h2 id="services-title" data-i18n="svc.title">What we do</h2>
+          <p data-i18n="svc.lede">RCC supports learners and researchers at every stage, from school mathematics to an article in an international journal.</p>
         </div>
       </div>
       <div class="services">
         <article class="service">
           <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 7h17a5 5 0 0 1 5 5v21H13a5 5 0 0 1-5-5z"/><path d="M8 28a5 5 0 0 1 5-5h17"/><path d="M14 13h10M14 17h7"/></svg>
-          <h3>Journal publishing</h3>
+          <h3 data-i18n="svc.pub.title">Journal publishing</h3>
           <p class="service-id" lang="id">Publikasi jurnal</p>
-          <p>Ten peer-reviewed, open-access international journals in mathematics, business, education, health, law, and community service, nine of them accredited by SINTA.</p>
-          <ul class="service-tags" aria-label="Highlights">
+          <p data-i18n="svc.pub.text">Ten peer-reviewed, open-access international journals in mathematics, business, education, health, law, and community service, nine of them accredited by SINTA.</p>
+          <ul class="service-tags" aria-label="Highlights" data-i18n="svc.pub.tags">
             <li>10 journals</li><li>SINTA 2 to 5</li><li>Crossref DOI</li>
           </ul>
           <div class="service-links">
-            <a href="#journals">Browse the journals</a>
-            <a href="#call-for-papers">Open calls for papers</a>
+            <a href="#journals" data-i18n="svc.pub.link1">Browse the journals</a>
+            <a href="#call-for-papers" data-i18n="svc.pub.link2">Open calls for papers</a>
           </div>
         </article>
         <article class="service">
           <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="7" width="28" height="18" rx="1.5"/><path d="M20 25v5M14 34l6-4 6 4"/><path d="M11 20l5-5 4 3 7-7"/></svg>
-          <h3>Workshops and training</h3>
+          <h3 data-i18n="svc.ws.title">Workshops and training</h3>
           <p class="service-id" lang="id">Workshop dan pelatihan</p>
-          <p>Scientific writing, publication coaching for Scopus-indexed journals, and research data skills such as SPSS and AI tools, delivered on campus or online.</p>
-          <ul class="service-tags" aria-label="Formats">
+          <p data-i18n="svc.ws.text">Scientific writing, publication coaching for Scopus-indexed journals, and research data skills such as SPSS and AI tools, delivered on campus or online.</p>
+          <ul class="service-tags" aria-label="Formats" data-i18n="svc.ws.tags">
             <li>On-campus workshops</li><li>Coaching clinics</li><li>Webinars</li>
           </ul>
           <div class="service-links">
-            <a href="#events">See recent workshops</a>
-            <a href="https://wa.me/6285287694386?text=Halo%20RCC%2C%20kami%20ingin%20mengadakan%20workshop" target="_blank" rel="noopener">Invite us to your campus</a>
+            <a href="#events" data-i18n="svc.ws.link1">See recent workshops</a>
+            <a href="https://wa.me/6285287694386?text=Halo%20RCC%2C%20kami%20ingin%20mengadakan%20workshop" target="_blank" rel="noopener" data-i18n="svc.ws.link2">Invite us to your campus</a>
           </div>
         </article>
         <article class="service">
           <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 8 4 15l16 7 16-7z"/><path d="M10 18v8c3 3 7 4 10 4s7-1 10-4v-8"/><path d="M36 15v9"/></svg>
-          <h3>Tutoring for school students</h3>
+          <h3 data-i18n="svc.tut.title">Tutoring for school students</h3>
           <p class="service-id" lang="id">Bimbingan belajar</p>
-          <p>Guided lessons in mathematics, English, and science for elementary, junior high, and senior high school students.</p>
-          <dl class="service-facts">
+          <p data-i18n="svc.tut.text">Guided lessons in mathematics, English, and science for elementary, junior high, and senior high school students.</p>
+          <dl class="service-facts" data-i18n="svc.tut.facts">
             <dt>Levels</dt><dd><span lang="id">SD</span>, <span lang="id">SMP</span>, <span lang="id">SMA</span></dd>
             <dt>Subjects</dt><dd>Mathematics, English, Science (<span lang="id">IPA</span>)</dd>
           </dl>
           <div class="service-links">
-            <a href="https://wa.me/6285287694386?text=Halo%20RCC%2C%20saya%20ingin%20bertanya%20tentang%20bimbingan%20belajar" target="_blank" rel="noopener">Ask about classes on WhatsApp</a>
+            <a href="https://wa.me/6285287694386?text=Halo%20RCC%2C%20saya%20ingin%20bertanya%20tentang%20bimbingan%20belajar" target="_blank" rel="noopener" data-i18n="svc.tut.link">Ask about classes on WhatsApp</a>
           </div>
         </article>
       </div>
@@ -140,10 +137,10 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="cfp-title">Call for papers</h2>
-          <p>These journals are accepting manuscripts for their next issues. Submissions are reviewed as they arrive, so sending early gives you the best chance of the issue you want.</p>
+          <h2 id="cfp-title" data-i18n="cfp.title">Call for papers</h2>
+          <p data-i18n="cfp.lede">These journals are accepting manuscripts for their next issues. Submissions are reviewed as they arrive, so sending early gives you the best chance of the issue you want.</p>
         </div>
-        <a class="btn btn-ghost" href="https://wa.me/6285287694386" target="_blank" rel="noopener">Ask which journal fits</a>
+        <a class="btn btn-ghost" href="https://wa.me/6285287694386" target="_blank" rel="noopener" data-i18n="cfp.ask">Ask which journal fits</a>
       </div>
       <ul class="cfp-list" id="cfp-list"></ul>
     </div>
@@ -154,8 +151,8 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="journals-title">Our journals</h2>
-          <p>Every journal is open access, peer reviewed, and assigns a Crossref DOI to each article.</p>
+          <h2 id="journals-title" data-i18n="dir.title">Our journals</h2>
+          <p data-i18n="dir.lede">Every journal is open access, peer reviewed, and assigns a Crossref DOI to each article.</p>
         </div>
       </div>
       <div class="dir-status" id="dir-status" aria-live="polite"></div>
@@ -168,8 +165,8 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="calendar-title">A new issue every month</h2>
-          <p>Each journal publishes four times a year, and the schedules interlock, so there is always an issue closing soon. Plan your submission around the month you need.</p>
+          <h2 id="calendar-title" data-i18n="cal.title">A new issue every month</h2>
+          <p data-i18n="cal.lede">Each journal publishes four times a year, and the schedules interlock, so there is always an issue closing soon. Plan your submission around the month you need.</p>
         </div>
       </div>
       <div class="now-strip">
@@ -182,11 +179,11 @@
           <ul id="next-list"></ul>
         </div>
       </div>
-      <p class="cal-swipe">Swipe the table sideways to see all twelve months.</p>
-      <div class="cal-scroll" tabindex="0" aria-label="Publishing calendar, scrollable">
+      <p class="cal-swipe" data-i18n="cal.swipe">Swipe the table sideways to see all twelve months.</p>
+      <div class="cal-scroll" tabindex="0" aria-label="Publishing calendar, scrollable" data-i18n-attr="aria-label:cal.scroll">
         <table class="cal" id="cal"></table>
       </div>
-      <p class="cal-note">Contact the editor of each journal for its submission deadline.</p>
+      <p class="cal-note" data-i18n="cal.note">Contact the editor of each journal for its submission deadline.</p>
     </div>
   </section>
 
@@ -194,9 +191,9 @@
   <section class="section" id="indexing" aria-labelledby="indexing-title">
     <div class="wrap indexing">
       <div>
-        <h2 id="indexing-title">Indexed where researchers look</h2>
-        <p>Our articles are discoverable through national and international indexes, and every journal follows the same editorial standards.</p>
-        <ul class="policy-list">
+        <h2 id="indexing-title" data-i18n="idx.title">Indexed where researchers look</h2>
+        <p data-i18n="idx.lede">Our articles are discoverable through national and international indexes, and every journal follows the same editorial standards.</p>
+        <ul class="policy-list" data-i18n="idx.policies">
           <li>Peer review before every acceptance decision</li>
           <li>Open access, free to read for everyone</li>
           <li>DOI registered with Crossref for every article</li>
@@ -205,15 +202,15 @@
         </ul>
       </div>
       <div class="index-grid">
-        <figure><img src="/assets/indexing/sinta.png" alt="SINTA, Science and Technology Index" width="370" height="120" loading="lazy"><figcaption>9 of 10 journals accredited</figcaption></figure>
-        <figure><img src="/assets/indexing/google-scholar.png" alt="Google Scholar" width="302" height="120" loading="lazy"><figcaption>All journals</figcaption></figure>
-        <figure><img src="/assets/indexing/dimensions.png" alt="Dimensions" width="447" height="120" loading="lazy"><figcaption>All journals</figcaption></figure>
-        <figure><img src="/assets/indexing/crossref.png" alt="Crossref" width="354" height="120" loading="lazy"><figcaption>DOI for every article</figcaption></figure>
-        <figure><img src="/assets/indexing/copernicus.png" alt="Index Copernicus International" width="522" height="120" loading="lazy"><figcaption>All journals</figcaption></figure>
-        <figure><img src="/assets/indexing/garuda.png" alt="Garuda, Garba Rujukan Digital" width="486" height="120" loading="lazy"><figcaption>RCC and IORA journals</figcaption></figure>
-        <figure><img src="/assets/indexing/worldcat.png" alt="OCLC WorldCat" width="407" height="120" loading="lazy"><figcaption>RCC and IORA journals</figcaption></figure>
-        <figure><img src="/assets/indexing/road.png" alt="ROAD, Directory of Open Access Scholarly Resources" width="388" height="120" loading="lazy"><figcaption>RCC and IORA journals</figcaption></figure>
-        <figure><img src="/assets/indexing/doaj.png" alt="DOAJ, Directory of Open Access Journals" width="522" height="120" loading="lazy"><figcaption>IJBESD, also in EBSCO</figcaption></figure>
+        <figure><img src="/assets/indexing/sinta.png" alt="SINTA, Science and Technology Index" width="370" height="120" loading="lazy"><figcaption data-i18n="idx.sinta">9 of 10 journals accredited</figcaption></figure>
+        <figure><img src="/assets/indexing/google-scholar.png" alt="Google Scholar" width="302" height="120" loading="lazy"><figcaption data-i18n="idx.all">All journals</figcaption></figure>
+        <figure><img src="/assets/indexing/dimensions.png" alt="Dimensions" width="447" height="120" loading="lazy"><figcaption data-i18n="idx.all">All journals</figcaption></figure>
+        <figure><img src="/assets/indexing/crossref.png" alt="Crossref" width="354" height="120" loading="lazy"><figcaption data-i18n="idx.doi">DOI for every article</figcaption></figure>
+        <figure><img src="/assets/indexing/copernicus.png" alt="Index Copernicus International" width="522" height="120" loading="lazy"><figcaption data-i18n="idx.all">All journals</figcaption></figure>
+        <figure><img src="/assets/indexing/garuda.png" alt="Garuda, Garba Rujukan Digital" width="486" height="120" loading="lazy"><figcaption data-i18n="idx.rcciora">RCC and IORA journals</figcaption></figure>
+        <figure><img src="/assets/indexing/worldcat.png" alt="OCLC WorldCat" width="407" height="120" loading="lazy"><figcaption data-i18n="idx.rcciora">RCC and IORA journals</figcaption></figure>
+        <figure><img src="/assets/indexing/road.png" alt="ROAD, Directory of Open Access Scholarly Resources" width="388" height="120" loading="lazy"><figcaption data-i18n="idx.rcciora">RCC and IORA journals</figcaption></figure>
+        <figure><img src="/assets/indexing/doaj.png" alt="DOAJ, Directory of Open Access Journals" width="522" height="120" loading="lazy"><figcaption data-i18n="idx.doaj">IJBESD, also in EBSCO</figcaption></figure>
       </div>
     </div>
   </section>
@@ -223,64 +220,64 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="events-title">Workshops and webinars</h2>
-          <p>We help researchers move from data to a published article, through free webinars and on-campus coaching with partner universities.</p>
+          <h2 id="events-title" data-i18n="ev.title">Workshops and webinars</h2>
+          <p data-i18n="ev.lede">We help researchers move from data to a published article, through free webinars and on-campus coaching with partner universities.</p>
         </div>
       </div>
       <div class="events">
         <article class="event-feature" data-ends="2026-11-04T21:00:00+07:00">
           <a class="event-poster" href="/assets/events/webinar-spss-ai-2026-11-04.jpg" target="_blank" rel="noopener">
-            <img src="/assets/events/webinar-spss-ai-2026-11-04.jpg" alt="Poster: webinar Pengolahan Data pada SPSS dengan Bantuan AI di Era Penelitian Modern, Wednesday 4 November 2026, speaker Dr. Hilda Azkiyah Surya" width="716" height="897" loading="lazy">
+            <img src="/assets/events/webinar-spss-ai-2026-11-04.jpg" data-i18n-attr="alt:ev.spss.alt" alt="Poster: webinar Pengolahan Data pada SPSS dengan Bantuan AI di Era Penelitian Modern, Wednesday 4 November 2026, speaker Dr. Hilda Azkiyah Surya" width="716" height="897" loading="lazy">
           </a>
           <div class="event-body">
-            <span class="tag" data-status>Upcoming webinar, free registration</span>
-            <h3>Data processing in SPSS with the help of AI</h3>
+            <span class="tag" data-status data-i18n="ev.tag.upcoming">Upcoming webinar, free registration</span>
+            <h3 data-i18n="ev.spss.title">Data processing in SPSS with the help of AI</h3>
             <p class="event-orig" lang="id">Pengolahan Data pada SPSS dengan Bantuan AI di Era Penelitian Modern</p>
-            <dl>
+            <dl data-i18n="ev.spss.details">
               <dt>Date</dt><dd>Wednesday, 4 November 2026</dd>
               <dt>Time</dt><dd>19:00 to 21:00 WIB, on Zoom</dd>
               <dt>Speaker</dt><dd>Dr. Hilda Azkiyah Surya<span>Part-time lecturer, Politeknik Negeri Bandung</span></dd>
               <dt>Language</dt><dd>Bahasa Indonesia</dd>
             </dl>
-            <p class="event-extra">Optional paid package: a 2-JP certificate, full materials, the session recording, and an APC discount voucher for RCC international journals.</p>
+            <p class="event-extra" data-i18n="ev.spss.extra">Optional paid package: a 2-JP certificate, full materials, the session recording, and an APC discount voucher for RCC international journals.</p>
             <div class="event-actions" data-register>
-              <a class="btn btn-primary" href="https://bit.ly/4im8Bug" target="_blank" rel="noopener">Register for free</a>
-              <a class="btn btn-light" href="https://wa.me/6285287694386" target="_blank" rel="noopener">Ask on WhatsApp</a>
+              <a class="btn btn-primary" href="https://bit.ly/4im8Bug" target="_blank" rel="noopener" data-i18n="ev.register">Register for free</a>
+              <a class="btn btn-light" href="https://wa.me/6285287694386" target="_blank" rel="noopener" data-i18n="ev.askwa">Ask on WhatsApp</a>
             </div>
           </div>
         </article>
         <div class="events-past">
-          <h3 class="events-sub">Past events</h3>
+          <h3 class="events-sub" data-i18n="ev.past">Past events</h3>
           <ul class="event-list">
             <li>
-              <div class="event-date"><strong>21</strong><span>Oct 2026</span></div>
+              <div class="event-date"><strong>21</strong><span data-i18n="ev.oct">Oct 2026</span></div>
               <div>
-                <h3>Using AI tools for research and scientific writing (series 1)</h3>
+                <h3 data-i18n="ev.ai.title">Using AI tools for research and scientific writing (series 1)</h3>
                 <p lang="id">Pemanfaatan Tools AI untuk Riset dan Penulisan Artikel Ilmiah</p>
-                <p>Webinar with Dr. Moch Panji Agung Saputra, lecturer at Universitas Padjadjaran</p>
-                <div class="event-thumbs"><a href="/assets/events/webinar-ai-tools-series-1-2026-10-21.jpg" target="_blank" rel="noopener"><img src="/assets/events/webinar-ai-tools-series-1-2026-10-21.jpg" alt="Poster of the 21 October 2026 webinar on AI tools for research" width="716" height="897" loading="lazy"></a></div>
+                <p data-i18n="ev.ai.desc">Webinar with Dr. Moch Panji Agung Saputra, lecturer at Universitas Padjadjaran</p>
+                <div class="event-thumbs"><a href="/assets/events/webinar-ai-tools-series-1-2026-10-21.jpg" target="_blank" rel="noopener"><img src="/assets/events/webinar-ai-tools-series-1-2026-10-21.jpg" data-i18n-attr="alt:ev.ai.alt" alt="Poster of the 21 October 2026 webinar on AI tools for research" width="716" height="897" loading="lazy"></a></div>
               </div>
             </li>
             <li>
-              <div class="event-date"><strong>1–2</strong><span>Oct 2026</span></div>
+              <div class="event-date"><strong>1–2</strong><span data-i18n="ev.oct">Oct 2026</span></div>
               <div>
-                <h3>Workshop and coaching clinic: publishing in Scopus-indexed journals</h3>
+                <h3 data-i18n="ev.pakuan.title">Workshop and coaching clinic: publishing in Scopus-indexed journals</h3>
                 <p lang="id">Workshop &amp; Coaching Clinic Publikasi Jurnal Terindeks Scopus</p>
-                <p>Hosted by UP3M FMIPA, Universitas Pakuan, Bogor</p>
-                <div class="event-thumbs"><a href="/assets/events/workshop-scopus-pakuan-2026-10-01.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-scopus-pakuan-2026-10-01.jpg" alt="Photo collage of participants at the Scopus publication workshop, Universitas Pakuan, 1 to 2 October 2026" width="716" height="897" loading="lazy"></a><a href="/assets/events/workshop-scopus-pakuan-2026-10-01-thanks.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-scopus-pakuan-2026-10-01-thanks.jpg" alt="Photo collage thanking UP3M FMIPA Universitas Pakuan for hosting the workshop" width="716" height="897" loading="lazy"></a><a href="/assets/events/workshop-scopus-pakuan-2026-10-01-fmipa-unpak.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-scopus-pakuan-2026-10-01-fmipa-unpak.jpg" alt="FMIPA Universitas Pakuan publication: Workshop Publikasi Jurnal Terindeks Scopus, 1 October 2026, photo collage of participants" width="521" height="664" loading="lazy"></a></div>
+                <p data-i18n="ev.pakuan.desc">Hosted by UP3M FMIPA, Universitas Pakuan, Bogor</p>
+                <div class="event-thumbs"><a href="/assets/events/workshop-scopus-pakuan-2026-10-01.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-scopus-pakuan-2026-10-01.jpg" data-i18n-attr="alt:ev.pakuan.alt1" alt="Photo collage of participants at the Scopus publication workshop, Universitas Pakuan, 1 to 2 October 2026" width="716" height="897" loading="lazy"></a><a href="/assets/events/workshop-scopus-pakuan-2026-10-01-thanks.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-scopus-pakuan-2026-10-01-thanks.jpg" data-i18n-attr="alt:ev.pakuan.alt2" alt="Photo collage thanking UP3M FMIPA Universitas Pakuan for hosting the workshop" width="716" height="897" loading="lazy"></a><a href="/assets/events/workshop-scopus-pakuan-2026-10-01-fmipa-unpak.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-scopus-pakuan-2026-10-01-fmipa-unpak.jpg" data-i18n-attr="alt:ev.pakuan.alt3" alt="FMIPA Universitas Pakuan publication: Workshop Publikasi Jurnal Terindeks Scopus, 1 October 2026, photo collage of participants" width="521" height="664" loading="lazy"></a></div>
               </div>
             </li>
             <li>
               <div class="event-date"><strong>2</strong><span>Jun 2026</span></div>
               <div>
-                <h3>Scientific article writing workshop</h3>
+                <h3 data-i18n="ev.ummi.title">Scientific article writing workshop</h3>
                 <p lang="id">Workshop Penulisan Artikel Ilmiah</p>
-                <p>In collaboration with Universitas Muhammadiyah Sukabumi</p>
-                <div class="event-thumbs"><a href="/assets/events/workshop-writing-ummi-sukabumi-2026-06-02.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-writing-ummi-sukabumi-2026-06-02.jpg" alt="Speaker presenting at the scientific article writing workshop, Universitas Muhammadiyah Sukabumi, 2 June 2026" width="830" height="853" loading="lazy"></a></div>
+                <p data-i18n="ev.ummi.desc">In collaboration with Universitas Muhammadiyah Sukabumi</p>
+                <div class="event-thumbs"><a href="/assets/events/workshop-writing-ummi-sukabumi-2026-06-02.jpg" target="_blank" rel="noopener"><img src="/assets/events/workshop-writing-ummi-sukabumi-2026-06-02.jpg" data-i18n-attr="alt:ev.ummi.alt" alt="Speaker presenting at the scientific article writing workshop, Universitas Muhammadiyah Sukabumi, 2 June 2026" width="830" height="853" loading="lazy"></a></div>
               </div>
             </li>
           </ul>
-          <p class="institution-cta">Want a workshop for your faculty? <a href="https://wa.me/6285287694386" target="_blank" rel="noopener">Contact us on WhatsApp</a>.</p>
+          <p class="institution-cta" data-i18n="ev.cta">Want a workshop for your faculty? <a href="https://wa.me/6285287694386?text=Halo%20RCC%2C%20kami%20ingin%20mengadakan%20workshop" target="_blank" rel="noopener">Contact us on WhatsApp</a>.</p>
         </div>
       </div>
     </div>
@@ -289,14 +286,14 @@
   <!-- About -->
   <section class="section" aria-labelledby="about-title">
     <div class="wrap about">
-      <img src="/assets/rcc-logo.png" alt="Research Collaboration Community logo" width="160" height="146">
+      <img src="/assets/rcc-logo.png" alt="Research Collaboration Community logo" data-i18n-attr="alt:about.logo" width="160" height="146">
       <div>
-        <h2 id="about-title">About Research Collaboration Community</h2>
-        <p>Research Collaboration Community (Rescollacomm) was founded in Bandung on 25 May 2019 to advance quantitative research and mathematical modeling in Indonesia. Today it manages ten international journals across three publishing units, RCC, IORA, and CRP, runs writing and publication workshops with universities across the country, and offers tutoring for school students.</p>
+        <h2 id="about-title" data-i18n="about.title">About Research Collaboration Community</h2>
+        <p data-i18n="about.text">Research Collaboration Community (Rescollacomm) was founded in Bandung on 25 May 2019 to advance quantitative research and mathematical modeling in Indonesia. Today it manages ten international journals across three publishing units, RCC, IORA, and CRP, runs writing and publication workshops with universities across the country, and offers tutoring for school students.</p>
       </div>
       <div class="about-actions">
-        <a class="btn btn-ghost" href="/team">Meet the management team</a>
-        <a class="btn btn-ghost" href="#contact">Contact us</a>
+        <a class="btn btn-ghost" href="/team" data-i18n="about.team">Meet the management team</a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="about.contact">Contact us</a>
       </div>
     </div>
   </section>
@@ -310,7 +307,7 @@
         <img src="/assets/rcc-logo.png" alt="" width="56" height="56">
         <div>
           <strong>Research Collaboration Community</strong>
-          <address>
+          <address data-i18n="foot.address">
             Jl. Riung Ampuh No. 3, Riung Bandung<br>
             Bandung 40295, West Java, Indonesia<br>
             <a href="mailto:ejournalrescollacomm@gmail.com">ejournalrescollacomm@gmail.com</a><br>
@@ -319,7 +316,7 @@
         </div>
       </div>
       <div>
-        <h2>RCC journals</h2>
+        <h2 data-i18n="foot.rcc">RCC journals</h2>
         <ul>
           <li><a href="https://journal.rescollacomm.com/index.php/ijbesd/index">IJBESD</a></li>
           <li><a href="https://journal.rescollacomm.com/index.php/ijrcs/index">IJRCS</a></li>
@@ -328,7 +325,7 @@
         </ul>
       </div>
       <div>
-        <h2>CRP journals</h2>
+        <h2 data-i18n="foot.crp">CRP journals</h2>
         <ul>
           <li><a href="https://ejournal.corespub.com/index.php/ijmsc/index">IJMSC</a></li>
           <li><a href="https://ejournal.corespub.com/index.php/ijlcb/index">IJLCB</a></li>
@@ -337,25 +334,26 @@
         </ul>
       </div>
       <div>
-        <h2>IORA journals</h2>
+        <h2 data-i18n="foot.iora">IORA journals</h2>
         <ul>
           <li><a href="https://www.iorajournal.org/index.php/ijgor/index">IJGOR</a></li>
           <li><a href="https://www.iorajournal.org/index.php/orics">ORICS</a></li>
         </ul>
-        <h2 style="margin-top:24px">Follow us</h2>
+        <h2 style="margin-top:24px" data-i18n="foot.follow">Follow us</h2>
         <ul>
           <li><a href="https://www.instagram.com/rcc.academic/">Instagram @rcc.academic</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Research Collaboration Community. Articles are published open access.</span>
-      <a href="/team">Management team</a>
+      <span>© <span id="year">2026</span> Research Collaboration Community. <span data-i18n="foot.oa">Articles are published open access.</span></span>
+      <a href="/team" data-i18n="nav.team">Management team</a>
     </div>
   </div>
 </footer>
 
-<script src="/assets/js/journals.js?v=20261102g"></script>
-<script src="/assets/js/main.js?v=20261102g"></script>
+<script src="/assets/js/i18n.js?v=20261102h"></script>
+<script src="/assets/js/journals.js?v=20261102h"></script>
+<script src="/assets/js/main.js?v=20261102h"></script>
 </body>
 </html>
