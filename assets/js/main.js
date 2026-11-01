@@ -180,6 +180,16 @@
     document.getElementById("next-list").innerHTML = chipsFor(nextMonth);
   }
 
+  /* ---------- Events: retire the featured event once it has ended ---------- */
+  document.querySelectorAll("[data-ends]").forEach(function (ev) {
+    if (new Date() > new Date(ev.getAttribute("data-ends"))) {
+      var tag = ev.querySelector("[data-status]");
+      if (tag) { tag.textContent = "Past webinar"; tag.classList.add("is-past"); }
+      var reg = ev.querySelector("[data-register]");
+      if (reg) reg.hidden = true;
+    }
+  });
+
   var yr = document.getElementById("year");
   if (yr) yr.textContent = now.getFullYear();
 })();
