@@ -30,6 +30,30 @@
   var yr = document.getElementById("year");
   if (yr) yr.textContent = now.getFullYear();
 
+  /* ---------- Hero background video ---------- */
+  var video = document.getElementById("hero-video");
+  var pauseBtn = document.getElementById("hero-pause");
+  function syncPause() {
+    if (!pauseBtn || !video) return;
+    var paused = video.paused;
+    pauseBtn.setAttribute("aria-pressed", String(paused));
+    pauseBtn.setAttribute("aria-label", paused ? t("playVideo") : t("pauseVideo"));
+  }
+  if (video && pauseBtn) {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var saveData = navigator.connection && navigator.connection.saveData;
+    pauseBtn.hidden = false;
+    if (!reduce && !saveData) {
+      var p = video.play();
+      if (p && p.catch) p.catch(function () { syncPause(); });
+    }
+    video.addEventListener("play", syncPause);
+    video.addEventListener("pause", syncPause);
+    pauseBtn.addEventListener("click", function () { video.paused ? video.play() : video.pause(); });
+    syncPause();
+    I.onChange(syncPause);
+  }
+
   var J = window.RCC_JOURNALS;
   if (!J) { I.onChange(syncToggle); return; }
 

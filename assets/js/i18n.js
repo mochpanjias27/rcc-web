@@ -173,7 +173,9 @@
       calCaption: "Issue months for each journal",
       publishingIn: "Publishing in {month}",
       nextUp: "Next up in {month}",
-      pastWebinar: "Past webinar"
+      pastWebinar: "Past webinar",
+      pauseVideo: "Pause background video",
+      playVideo: "Play background video"
     },
     id: {
       menu: "Menu", close: "Tutup",
@@ -204,7 +206,9 @@
       calCaption: "Bulan terbit setiap jurnal",
       publishingIn: "Terbit bulan {month}",
       nextUp: "Berikutnya, {month}",
-      pastWebinar: "Webinar telah berlalu"
+      pastWebinar: "Webinar telah berlalu",
+      pauseVideo: "Jeda video latar",
+      playVideo: "Putar video latar"
     }
   };
 

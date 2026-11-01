@@ -20,3 +20,7 @@ No build step: plain HTML, CSS, and JavaScript.
 - Text built by JavaScript (journal list, calendar, call for papers) uses the `STR` table in `i18n.js`.
 - Journal subjects in Indonesian: `subjectsId` in `assets/js/journals.js`.
 - English is the default. Indonesian appears only after the visitor clicks ID; that choice is then remembered in their browser. `?lang=id` or `?lang=en` in a link forces a language.
+
+## Hero video
+- `assets/hero/rcc-hero.webm` and `rcc-hero.mp4` (same clip, 12 s loop, no audio) plus `rcc-hero-poster.jpg` (shown before playback and when motion is reduced).
+- To use your own footage, replace those three files with the same names. Recommended: 10 to 20 seconds, 1280×720 or larger, no audio, under about 3 MB, dark or navy-toned so the left fade blends into the hero.
