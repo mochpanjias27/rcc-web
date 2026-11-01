@@ -2,6 +2,8 @@
 window.RCC_JOURNALS = [
   {
     code: "IJBESD",
+    eissn: "2722-1156",
+    callForPapers: true,
     name: "International Journal of Business, Economics, and Social Development",
     imprint: "RCC",
     url: "https://journal.rescollacomm.com/index.php/ijbesd",
@@ -14,6 +16,8 @@ window.RCC_JOURNALS = [
   },
   {
     code: "IJRCS",
+    eissn: null,
+    callForPapers: true,
     name: "International Journal of Research in Community Service",
     imprint: "RCC",
     url: "https://journal.rescollacomm.com/index.php/ijrcs",
@@ -26,6 +30,8 @@ window.RCC_JOURNALS = [
   },
   {
     code: "IJMSC",
+    eissn: "3025-0803",
+    callForPapers: true,
     name: "International Journal of Mathematics, Statistics, and Computing",
     imprint: "CRP",
     url: "https://ejournal.corespub.com/index.php/ijmsc",
@@ -62,6 +68,8 @@ window.RCC_JOURNALS = [
   },
   {
     code: "IJEER",
+    eissn: "2776-7590",
+    callForPapers: true,
     name: "International Journal of Ethno-Sciences and Education Research",
     imprint: "RCC",
     url: "https://journal.rescollacomm.com/index.php/ijeer",
@@ -74,6 +82,8 @@ window.RCC_JOURNALS = [
   },
   {
     code: "IJGOR",
+    eissn: "2722-1016",
+    callForPapers: true,
     name: "International Journal of Global Operations Research",
     imprint: "IORA",
     url: "https://www.iorajournal.org/index.php/ijgor",
@@ -110,6 +120,8 @@ window.RCC_JOURNALS = [
   },
   {
     code: "IJHMS",
+    eissn: "2746-3281",
+    callForPapers: true,
     name: "International Journal of Health, Medicine, and Sports",
     imprint: "CRP",
     url: "https://ejournal.corespub.com/index.php/ijhms",

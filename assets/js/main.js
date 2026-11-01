@@ -81,7 +81,7 @@
         "</div>" +
         '<div class="j-main">' +
           '<h3 class="j-name"><a href="' + j.url + '/index" target="_blank" rel="noopener">' + highlight(j.name, q) + " (" + highlight(j.code, q) + ")</a></h3>" +
-          '<p class="j-meta">Published by ' + esc(window.RCC_IMPRINTS[j.imprint]) + ", quarterly: " + schedule + "</p>" +
+          '<p class="j-meta">Published by ' + esc(window.RCC_IMPRINTS[j.imprint]) + ", quarterly: " + schedule + (j.eissn ? ". e-ISSN " + j.eissn : "") + "</p>" +
           '<ul class="j-subjects" aria-label="Subjects">' + j.subjects.map(function (s) { return "<li>" + highlight(s, q) + "</li>"; }).join("") + "</ul>" +
           articleSearch +
         "</div>" +
@@ -150,6 +150,36 @@
     });
     var params = new URLSearchParams(window.location.search);
     setState(params.get("q") || "", params.get("sinta") || "all");
+  }
+
+  /* ---------- Call for papers ---------- */
+  var cfpList = document.getElementById("cfp-list");
+  if (cfpList) {
+    var nextIssue = function (j) {
+      var y = now.getFullYear();
+      for (var k = 1; k <= 12; k++) {
+        var m = ((thisMonth - 1 + k) % 12) + 1;
+        if (j.months.indexOf(m) !== -1) return MONTHS_LONG[m - 1] + " " + (m <= thisMonth ? y + 1 : y);
+      }
+    };
+    cfpList.innerHTML = J.filter(function (j) { return j.callForPapers; }).map(function (j) {
+      var code = j.code.toLowerCase();
+      var sinta = j.sinta ? '<span class="sinta" data-level="' + j.sinta + '">SINTA ' + j.sinta + "</span>" : "";
+      return '<li class="cfp-card">' +
+        '<a class="cfp-poster" href="/assets/cfp/' + code + '.jpg" target="_blank" rel="noopener">' +
+          '<img src="/assets/cfp/' + code + '.jpg" alt="Call for papers poster for ' + esc(j.name) + '" width="710" height="902" loading="lazy">' +
+        "</a>" +
+        '<div class="cfp-body">' +
+          '<h3><span class="cfp-code">' + j.code + "</span>" + esc(j.name) + "</h3>" +
+          '<p class="cfp-next">Next issue: <strong>' + nextIssue(j) + "</strong></p>" +
+          '<div class="cfp-meta">' + sinta + '<span class="cfp-apc">APC USD ' + j.apc + "</span></div>" +
+          '<div class="cfp-actions">' +
+            '<a class="btn btn-primary" href="' + j.url + '/about/submissions" target="_blank" rel="noopener">Submit to ' + j.code + "</a>" +
+            '<a class="btn btn-ghost" href="/assets/cfp/' + code + '.jpg" target="_blank" rel="noopener">View poster</a>' +
+          "</div>" +
+        "</div>" +
+      "</li>";
+    }).join("");
   }
 
   /* ---------- Publishing calendar ---------- */
