@@ -75,7 +75,10 @@
       : "";
     return (
       '<li class="journal" data-imprint="' + j.imprint + '">' +
-        '<div class="j-code" aria-hidden="true">' + j.code + "</div>" +
+        '<div class="j-brand" aria-hidden="true">' +
+          '<div class="j-code">' + j.code + "</div>" +
+          '<img class="j-logo" src="/assets/journals/' + j.code.toLowerCase() + '.png" alt="" width="160" height="160" loading="lazy">' +
+        "</div>" +
         '<div class="j-main">' +
           '<h3 class="j-name"><a href="' + j.url + '/index" target="_blank" rel="noopener">' + highlight(j.name, q) + " (" + highlight(j.code, q) + ")</a></h3>" +
           '<p class="j-meta">Published by ' + esc(window.RCC_IMPRINTS[j.imprint]) + ", quarterly: " + schedule + "</p>" +
