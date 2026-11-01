@@ -20,6 +20,9 @@
     "nav.team": "Tim manajemen",
     "nav.submit": "Kirim naskah",
     "lang.label": "Pilih bahasa",
+    "wa.text": "Chat dengan kami",
+    "wa.label": "Chat dengan RCC via WhatsApp",
+    "wa.href": "https://wa.me/6285287694386?text=Halo%20RCC%2C%20saya%20ingin%20bertanya.",
 
     /* ---- hero ---- */
     "hero.title": "Temukan jurnal yang tepat untuk penelitian Anda.",
