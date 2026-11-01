@@ -283,7 +283,7 @@ mark { background: var(--red-soft); color: inherit; padding: 0 1px; border-radiu
 .event-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
 .events-sub { font-family: var(--sans); font-size: var(--fs-sm); font-weight: 700; color: var(--muted); margin-bottom: 4px; }
 .event-list { list-style: none; margin: 0; padding: 0; }
-.event-list li { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 16px; padding: 18px 0; border-top: 1px solid var(--line); align-items: start; }
+.event-list li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-top: 1px solid var(--line); align-items: start; }
 .event-list li:last-child { border-bottom: 1px solid var(--line); }
 .event-date { font-family: var(--serif); color: var(--navy); line-height: 1.1; }
 .event-date strong { display: block; font-size: var(--fs-xl); font-weight: 500; }
@@ -291,16 +291,17 @@ mark { background: var(--red-soft); color: inherit; padding: 0 1px; border-radiu
 .event-list h3 { font-family: var(--sans); font-size: var(--fs-base); font-weight: 600; line-height: 1.35; }
 .event-list p { font-size: var(--fs-sm); color: var(--muted); margin-top: 4px; }
 .event-list p[lang="id"] { font-family: var(--serif); font-style: italic; font-size: 0.95rem; }
-.event-thumb { display: block; width: 64px; border: 1px solid var(--line); border-radius: var(--radius-s); overflow: hidden; }
-.event-thumb img { width: 100%; height: auto; }
-.event-thumb:hover { border-color: var(--navy); }
+.event-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.event-thumbs a { display: block; width: 96px; aspect-ratio: 4 / 5; border: 1px solid var(--line); border-radius: var(--radius-s); overflow: hidden; background: var(--paper); }
+.event-thumbs img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.event-thumbs a:hover { border-color: var(--navy); }
 .institution-cta { margin-top: 24px; font-size: var(--fs-sm); color: var(--muted); }
+@media (min-width: 1101px) { .event-feature { position: sticky; top: 96px; } }
 @media (max-width: 1100px) { .events { grid-template-columns: 1fr; } }
 @media (max-width: 640px) {
   .event-feature { grid-template-columns: 1fr; padding: 20px; }
   .event-poster { max-width: 260px; }
   .event-list li { grid-template-columns: 56px minmax(0, 1fr); }
-  .event-thumb { grid-column: 2; width: 72px; }
 }
 
 /* ---------- About strip ---------- */
