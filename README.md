@@ -19,4 +19,4 @@ No build step: plain HTML, CSS, and JavaScript.
   For attributes use `data-i18n-attr="placeholder:some.key|alt:other.key"`.
 - Text built by JavaScript (journal list, calendar, call for papers) uses the `STR` table in `i18n.js`.
 - Journal subjects in Indonesian: `subjectsId` in `assets/js/journals.js`.
-- The choice is remembered per browser; `?lang=id` or `?lang=en` in a link forces a language.
+- English is the default. Indonesian appears only after the visitor clicks ID; that choice is then remembered in their browser. `?lang=id` or `?lang=en` in a link forces a language.

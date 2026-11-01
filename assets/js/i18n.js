@@ -213,9 +213,9 @@
   function pickInitial() {
     var q = new URLSearchParams(window.location.search).get("lang");
     if (q === "id" || q === "en") return q;
+    // English by default; Indonesian only after the visitor picks it (remembered in this browser).
     try { var s = localStorage.getItem(KEY); if (s === "id" || s === "en") return s; } catch (e) {}
-    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "";
-    return /^(id|ms)\b/i.test(nav) ? "id" : "en";
+    return "en";
   }
 
   var lang = pickInitial();
