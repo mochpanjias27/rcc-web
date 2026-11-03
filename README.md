@@ -24,3 +24,7 @@ No build step: plain HTML, CSS, and JavaScript.
 ## Hero video
 - `assets/hero/rcc-hero.webm` and `rcc-hero.mp4` (same clip, 12 s loop, no audio) plus `rcc-hero-poster.jpg` (shown before playback and when motion is reduced).
 - To use your own footage, replace those three files with the same names. Recommended: 10 to 20 seconds, 1280×720 or larger, no audio, under about 3 MB, dark or navy-toned so the left fade blends into the hero.
+
+## Tutoring page (/bimbel)
+- `bimbel.html` with programme data and prices in `assets/js/bimbel.js` (`PROGRAMS`, prices per session in rupiah as `[min, max]`).
+- Sign-up and the consultation form open WhatsApp with a pre-filled message; no data is stored on the site.
