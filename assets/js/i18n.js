@@ -308,7 +308,7 @@
     "pt.cta2": "Lihat paket kerja sama",
     "pt.p1": "jurnal internasional dikelola RCC, sembilan terakreditasi SINTA",
     "pt.p2": "trainer dengan profil penulis Scopus, h-index hingga 35",
-    "pt.p3": "seri prosiding konferensi milik RCC, dengan DOI Crossref",
+    "pt.p3": "terbitan jurnal setiap tahun, siap menampung luaran konferensi",
     "pt.p4": "bermitra dengan akademisi sejak 2019, berbasis di Bandung",
     "pt.pk.title": "Paket kerja sama",
     "pt.pk.lede": "Mulai dari satu kegiatan atau langsung kemitraan jangka panjang. Setiap paket disesuaikan, dan biaya mengikuti cakupan yang disepakati bersama.",
