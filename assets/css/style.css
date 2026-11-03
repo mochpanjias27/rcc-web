@@ -490,25 +490,41 @@ html[lang="id"] .event-list p[lang="id"] { display: none; }
 .bb-form-note { margin-top: 10px; font-size: var(--fs-xs); color: var(--muted); }
 @media (max-width: 640px) { .bb-form-row { grid-template-columns: 1fr; } }
 
-/* Hero illustration built from subject tiles */
-.bb-art { position: relative; height: 360px; }
-.bb-art-disc { position: absolute; inset: 20px 30px; border-radius: 50%; background: radial-gradient(circle at 50% 45%, rgba(255,255,255,.22), rgba(255,255,255,.04) 70%); }
-.bb-art-logo { position: absolute; left: 50%; top: 50%; width: 120px; height: auto; transform: translate(-50%, -50%); background: #fff; border-radius: 50%; padding: 10px; box-shadow: 0 16px 32px -12px rgba(0,0,0,.45); }
-.tile { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 92px; padding: 12px 14px; border-radius: 16px; font: 600 var(--fs-xs) var(--sans); color: var(--navy); background: #fff; box-shadow: 0 14px 28px -14px rgba(0,0,0,.55); }
-.tile b { font: 700 1.35rem/1.1 var(--serif); }
-.t-math { left: 4%; top: 8%; background: var(--sun, #fff1cf); }
-.t-eng  { right: 6%; top: 2%; background: #dbe8ff; }
-.t-sci  { left: 0; bottom: 18%; background: #d9f3e8; }
-.t-phy  { right: 0; bottom: 30%; background: #fff; }
-.t-utbk { left: 30%; bottom: 0; background: #e9e2ff; }
-.t-cpns { right: 22%; bottom: 4%; background: #fde2e1; }
-.page-bimbel .t-math { background: var(--sun); }
+/* Hero illustration: subject tiles orbiting the RCC logo, like planets */
+.bb-art { position: relative; width: 480px; height: 480px; justify-self: center; --r1: 124px; --r2: 204px; }
+.orbit-path { position: absolute; left: 50%; top: 50%; border-radius: 50%; border: 1.5px dashed rgba(255,255,255,.22); transform: translate(-50%, -50%); }
+.orbit-path.p1 { width: calc(var(--r1) * 2); height: calc(var(--r1) * 2); background: radial-gradient(circle, rgba(255,255,255,.10), rgba(255,255,255,.02) 70%); }
+.orbit-path.p2 { width: calc(var(--r2) * 2); height: calc(var(--r2) * 2); border-color: rgba(255,255,255,.14); }
+.bb-core { position: absolute; left: 50%; top: 50%; width: 128px; height: 128px; transform: translate(-50%, -50%); z-index: 2;
+  display: grid; place-items: center; background: #fff; border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(255,255,255,.12), 0 18px 36px -12px rgba(0,0,0,.5); }
+.bb-core img { width: 92px; height: auto; }
+.orbit { position: absolute; inset: 0; z-index: 3; }
+.sat { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform: rotate(var(--a)) translateY(calc(-1 * var(--r))) rotate(calc(-1 * var(--a))); }
+.o1 .sat { --r: var(--r1); }
+.o2 .sat { --r: var(--r2); }
+.tile { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 88px; padding: 10px 12px 9px; border-radius: 16px;
+  font: 700 var(--fs-xs) var(--sans); color: var(--navy); background: #fff; box-shadow: 0 14px 28px -14px rgba(0,0,0,.6); white-space: nowrap; }
+.tile .tg { font: 700 1.4rem/1.15 var(--serif); }
+.t-math .tg { font-size: 1.7rem; line-height: 1; }
+.tile .ti { width: 38px; height: 34px; }
+.t-math { background: #fff1cf; color: #7a4f00; }
+.t-eng  { background: #dbe8ff; color: #1f4fb0; }
+.t-sci  { background: #d9f3e8; color: #12704f; }
+.t-phy  { background: #fff;    color: var(--navy); }
+.t-utbk { background: #e9e2ff; color: #5638b8; }
+.t-cpns { background: #fde2e1; color: #a3241f; }
 @media (prefers-reduced-motion: no-preference) {
-  .tile { animation: bb-float 6s ease-in-out infinite; }
-  .t-eng, .t-utbk { animation-delay: -2s; }
-  .t-sci, .t-cpns { animation-delay: -4s; }
+  /* Both rings turn together, so inner tiles always sit in the gaps between outer ones */
+  .orbit { animation: orbit-spin 48s linear infinite; }
+  /* keep every tile upright while its ring turns */
+  .tile { animation: tile-upright 48s linear infinite; }
+  .bb-art:hover .orbit, .bb-art:hover .tile { animation-play-state: paused; }
 }
-@keyframes bb-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes orbit-spin { to { transform: rotate(360deg); } }
+@keyframes tile-upright { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(-360deg); } }
+@media (max-width: 1240px) { .bb-art { transform: scale(.82); } }
 @media (max-width: 900px) {
   .bb-hero-grid { grid-template-columns: 1fr; }
   .bb-art { display: none; }
