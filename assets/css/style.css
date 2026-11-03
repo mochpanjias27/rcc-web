@@ -837,3 +837,43 @@ html[lang="id"] .event-list p[lang="id"] { display: none; }
 @media (max-width: 860px) { .pt-partners-grid { grid-template-areas: "intro" "list" "gallery"; } }
 @media (max-width: 600px) { .pks-gallery { grid-template-columns: 1fr; } }
 .past-speakers { font-size: var(--fs-xs); color: var(--muted); }
+
+/* =========================================================
+   Prospectus flipbook
+   ========================================================= */
+.book-stage { background: radial-gradient(ellipse at 50% 35%, #1c3592 0%, #0a1e6e 45%, #071551 100%); color: #fff; padding: 36px 0 40px; min-height: calc(100vh - 72px); box-sizing: border-box; display: flex; flex-direction: column; }
+.book-stage:fullscreen { min-height: 100vh; padding-top: 20px; }
+.book-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 24px; width: 100%; box-sizing: border-box; }
+.book-kicker { font-size: var(--fs-sm); font-weight: 600; color: #f6c3c1; }
+.book-stage h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; margin-top: 6px; }
+.book-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.book-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 28px var(--gutter) 12px; }
+.book { margin: 0 auto; filter: drop-shadow(0 30px 40px rgba(0,0,0,.45)); }
+.book .stf__item img, .book img { user-select: none; -webkit-user-drag: none; }
+.book-bar { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 8px var(--gutter) 0; }
+.book-nav { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: #fff; background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.45); }
+.book-nav:hover:not(:disabled) { background: rgba(255,255,255,.18); border-color: #fff; }
+.book-nav:disabled { opacity: .35; cursor: default; }
+.book-count { min-width: 84px; text-align: center; font: 600 var(--fs-sm) var(--sans); font-variant-numeric: tabular-nums; }
+.book-hint { text-align: center; font-size: var(--fs-xs); color: #c3c9e6; margin-top: 10px; padding: 0 var(--gutter); }
+.book-noscript a { color: #fff; }
+
+/* Prospectus promo block (home page) */
+.prospectus-promo { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px 48px; align-items: center; }
+.pp-cover { display: block; width: 200px; aspect-ratio: 794 / 1123; border-radius: 3px 8px 8px 3px; overflow: hidden; box-shadow: -6px 0 0 -3px rgba(0,0,0,.12) inset, 0 20px 36px -16px rgba(7,21,81,.6); transform: perspective(900px) rotateY(-14deg); transition: transform .3s ease; }
+.pp-cover img { width: 100%; height: 100%; object-fit: cover; }
+.pp-cover:hover { transform: perspective(900px) rotateY(-4deg); }
+@media (prefers-reduced-motion: reduce) { .pp-cover, .pp-cover:hover { transform: none; } }
+.prospectus-promo h2 { font-size: clamp(1.6rem, 3vw, var(--fs-xl)); }
+.prospectus-promo p { color: var(--muted); margin-top: 10px; max-width: 58ch; }
+.pp-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+@media (max-width: 600px) { .prospectus-promo { grid-template-columns: 1fr; } .pp-cover { width: 160px; } }
+.book-page { background: #fff; overflow: hidden; }
+.book-page img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.book { filter: none; }
+.book-page { box-shadow: 0 24px 40px -18px rgba(0,0,0,.55); }
+.btn-light { background: transparent; }
+button.btn-light { color: #fff; }
+.book-wrap { padding-top: 20px; }
+.book-size { margin: 0 auto; max-width: 100%; }
+.book-size .book { width: 100%; }

@@ -385,6 +385,24 @@
     "pt.q5": "Bisakah kami memulai dengan satu kegiatan sebelum menandatangani MoU?",
     "pt.a5": "Bisa. Banyak mitra memulai dengan satu workshop, lalu meresmikan kemitraan jangka panjang setelah melihat hasilnya.",
 
+    /* ---- prospectus ---- */
+    "nav.prospectus": "Prospektus",
+    "meta.title.prospectus": "Prospektus 2026 | Research Collaboration Community",
+    "meta.desc.prospectus": "Baca Prospektus RCC 2026 dalam bentuk flipbook: jurnal, pelatihan publikasi Scopus, paket kerja sama, bimbel, dan kontak.",
+    "bk.kicker": "Prospektus RCC 2026",
+    "bk.title": "Baca prospektus kami",
+    "bk.download": "Unduh PDF",
+    "bk.full": "Layar penuh",
+    "bk.pagesLabel": "Halaman prospektus",
+    "bk.prev": "Halaman sebelumnya",
+    "bk.next": "Halaman berikutnya",
+    "bk.hint": "Tarik sudut halaman, klik tepi halaman, atau gunakan tombol panah untuk membalik halaman.",
+    "pp.open": "Buka Prospektus RCC 2026",
+    "pp.title": "Prospektus RCC 2026",
+    "pp.text": "Semua tentang RCC dalam sepuluh halaman: jurnal, pelatihan publikasi Scopus, trainer, paket kerja sama, bimbel, dan kontak kami. Balik halamannya di sini, atau unduh PDF-nya untuk dibagikan ke tim Anda.",
+    "pp.read": "Baca prospektus",
+    "pp.download": "Unduh PDF",
+
     /* ---- team page ---- */
     "team.crumbs": '<a href="/">Beranda</a> / Tentang / Tim manajemen',
     "team.title": "Tim manajemen",

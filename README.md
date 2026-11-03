@@ -28,3 +28,8 @@ No build step: plain HTML, CSS, and JavaScript.
 ## Tutoring page (/bimbel)
 - `bimbel.html` with programme data and prices in `assets/js/bimbel.js` (`PROGRAMS`, prices per session in rupiah as `[min, max]`).
 - Sign-up and the consultation form open WhatsApp with a pre-filled message; no data is stored on the site.
+
+## Prospectus flipbook (/prospectus)
+- `prospectus.html` + `assets/js/book.js`, using StPageFlip 2.0.7 (MIT, `assets/vendor/`).
+- Pages are JPGs in `assets/prospectus/pages/` rendered from `assets/prospectus/RCC-Prospectus-2026.pdf`.
+  To update: replace the PDF, then `pdftoppm -r 144 -jpeg -jpegopt quality=82,progressive=y RCC-Prospectus-2026.pdf pages/p`.
