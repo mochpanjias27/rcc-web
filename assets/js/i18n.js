@@ -399,7 +399,7 @@
     "bk.hint": "Tarik sudut halaman, klik tepi halaman, atau gunakan tombol panah untuk membalik halaman.",
     "pp.open": "Buka Prospektus RCC 2026",
     "pp.title": "Prospektus RCC 2026",
-    "pp.text": "Semua tentang RCC dalam sepuluh halaman: jurnal, pelatihan publikasi Scopus, trainer, paket kerja sama, bimbel, dan kontak kami. Balik halamannya di sini, atau unduh PDF-nya untuk dibagikan ke tim Anda.",
+    "pp.text": "Semua tentang RCC dalam satu buku ringkas: kepemimpinan, jurnal, pelatihan publikasi Scopus, trainer, paket kerja sama, bimbel, dan kontak kami. Balik halamannya di sini, atau unduh PDF-nya untuk dibagikan ke tim Anda.",
     "pp.read": "Baca prospektus",
     "pp.download": "Unduh PDF",
 
