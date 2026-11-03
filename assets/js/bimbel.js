@@ -80,6 +80,8 @@
       ask: "Hello RCC, I am interested in {title}.",
       consult: "Hello RCC, I would like a free consultation about {level} tutoring.",
       consultName: " My name is {name}.",
+      consultFormat: " Preferred format: {format}.",
+      formats: { po: "private, online", pt: "private, face to face", go: "group, online", gt: "group, face to face" },
       currency: function (n) { return "IDR " + n.toLocaleString("en-US"); },
       none: "Choose a level"
     },
@@ -90,6 +92,8 @@
       ask: "Halo RCC, saya tertarik dengan {title}.",
       consult: "Halo RCC, saya ingin konsultasi gratis tentang bimbel {level}.",
       consultName: " Nama saya {name}.",
+      consultFormat: " Format yang diinginkan: {format}.",
+      formats: { po: "privat, online", pt: "privat, tatap muka", go: "kelompok, online", gt: "kelompok, tatap muka" },
       currency: function (n) { return "Rp" + n.toLocaleString("id-ID"); },
       none: "Pilih jenjang"
     }
@@ -151,7 +155,10 @@
       var level = form.level.value;
       var name = form.name.value.trim();
       var p = PROGRAMS.filter(function (x) { return x.id === level; })[0];
-      var msg = fill(S("consult"), { level: p ? p.level : "" }) + (name ? fill(S("consultName"), { name: name }) : "");
+      var fmt = form.format ? form.format.value : "";
+      var msg = fill(S("consult"), { level: p ? p.level : "" }) +
+        (fmt ? fill(S("consultFormat"), { format: S("formats")[fmt] }) : "") +
+        (name ? fill(S("consultName"), { name: name }) : "");
       window.open(wa(msg), "_blank", "noopener");
     });
   }
