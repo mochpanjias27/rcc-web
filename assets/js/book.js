@@ -6,7 +6,7 @@
 
   var N = 12;
   var pages = [];
-  for (var i = 1; i <= N; i++) pages.push("/assets/prospectus/pages/p-" + (i < 10 ? "0" + i : i) + ".jpg");
+  for (var i = 1; i <= N; i++) pages.push("/assets/prospectus/pages/p-" + (i < 10 ? "0" + i : i) + ".jpg?v=20261105b");
 
   // Fit the open book (two A4 pages side by side) inside the visible height.
   function fit() {
