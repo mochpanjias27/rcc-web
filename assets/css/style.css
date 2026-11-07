@@ -930,3 +930,19 @@ button.btn-light { color: #fff; }
 .cs-int-list li { background: #fff; border-radius: var(--radius-m); padding: 18px 20px; color: var(--muted); font-size: var(--fs-sm); border-left: 3px solid var(--red); }
 .cs-int-list b { display: block; color: var(--navy); font-size: var(--fs-base); margin-bottom: 4px; }
 @media (max-width: 860px) { .cs-int-grid, .cs-int-list { grid-template-columns: 1fr; } }
+/* Consulting hero animation */
+.cs-box { animation: csPulse 3.2s ease-in-out infinite; animation-delay: var(--d); }
+@keyframes csPulse { 0%, 100% { stroke-opacity: .55; } 12% { stroke-opacity: 1; stroke-width: 2.2px; } 30% { stroke-opacity: .55; stroke-width: 1.5px; } }
+.cs-box-in { animation-name: csPulseIn; }
+@keyframes csPulseIn { 0%, 100% { fill: rgba(7,21,81,.62); } 12% { fill: rgba(200,49,44,.35); } 35% { fill: rgba(7,21,81,.62); } }
+.cs-flow { animation: csFlow 1s linear infinite; }
+@keyframes csFlow { to { stroke-dashoffset: -14; } }
+.cs-dot { transform-box: fill-box; transform-origin: center; animation: csDot 7s ease-out infinite; animation-delay: calc(var(--i) * .25s); }
+@keyframes csDot { 0% { opacity: 0; transform: scale(.2); } 6% { opacity: 1; transform: scale(1.35); } 9% { transform: scale(1); } 82% { opacity: 1; } 92%, 100% { opacity: 0; transform: scale(1); } }
+.cs-fit { stroke-dasharray: 140; stroke-dashoffset: 140; animation: csFit 7s ease-in-out infinite; }
+@keyframes csFit { 0%, 36% { stroke-dashoffset: 140; opacity: 1; } 55%, 84% { stroke-dashoffset: 0; opacity: 1; } 94% { stroke-dashoffset: 0; opacity: 0; } 100% { stroke-dashoffset: 140; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .cs-box, .cs-flow, .cs-dot, .cs-fit { animation: none; }
+  .cs-fit { stroke-dashoffset: 0; }
+  .cs-particles { display: none; }
+}

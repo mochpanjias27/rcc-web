@@ -18,6 +18,18 @@
     }
   };
 
+  // Hero animation: stop the SMIL particles for reduced motion, and pause while off screen
+  var art = document.querySelector(".cs-hero-art");
+  if (art && art.pauseAnimations) {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) art.pauseAnimations();
+    else if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) art.unpauseAnimations(); else art.pauseAnimations(); });
+      }).observe(art);
+    }
+  }
+
   var form = document.getElementById("consult-form");
   if (!form) return;
 
