@@ -106,12 +106,34 @@ p { margin: 0; }
 .nav .btn { margin-left: 8px; color: #fff; white-space: nowrap; }
 .nav .btn:hover { background: #a92622; color: #fff; }
 .nav-toggle { display: none; margin-left: auto; background: none; border: 1.5px solid var(--line); border-radius: var(--radius-s); padding: 8px 12px; font: 600 var(--fs-sm) var(--sans); color: var(--navy); cursor: pointer; }
-@media (max-width: 1260px) {
+/* Services dropdown */
+.nav-group { position: relative; }
+.nav-drop { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; cursor: pointer; font: 500 var(--fs-sm)/1.5 var(--sans); color: var(--ink); padding: 8px 10px; border-radius: var(--radius-s); }
+.nav-drop:hover, .nav-drop.is-current, .nav-drop[aria-expanded="true"] { color: var(--navy); background: var(--mist); }
+.nav-drop .chev { transition: transform .2s ease; }
+.nav-drop[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.nav-menu { display: none; }
+.nav-menu a { display: flex; flex-direction: column; gap: 2px; white-space: normal; }
+.nav-menu a b { font-weight: 600; color: var(--navy); }
+.nav-menu a span { font-size: var(--fs-xs); font-weight: 400; color: var(--muted); line-height: 1.4; }
+@media (min-width: 1081px) {
+  .nav-menu { position: absolute; left: -8px; top: 100%; width: 320px; padding: 8px; margin-top: 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 18px 40px rgba(10,30,110,.14); }
+  .nav-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; } /* hover bridge */
+  .nav-group:hover .nav-menu, .nav-drop[aria-expanded="true"] + .nav-menu { display: flex; flex-direction: column; gap: 2px; }
+  .nav-group:hover .nav-drop .chev { transform: rotate(180deg); }
+  .nav-menu a { padding: 10px 12px; }
+  .nav-menu a:hover, .nav-menu a[aria-current="page"] { background: var(--mist); }
+}
+@media (max-width: 1080px) {
   .nav-toggle { display: inline-flex; }
-  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; padding: 8px var(--gutter) 16px; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; padding: 8px var(--gutter) 16px; max-height: calc(100vh - 72px); overflow-y: auto; }
   .nav.open { display: flex; }
   .nav a { padding: 12px 8px; }
   .nav .btn { margin: 8px 0 0; }
+  .nav-drop { width: 100%; justify-content: space-between; padding: 12px 8px; }
+  .nav-drop.is-current { background: none; }
+  .nav-drop[aria-expanded="true"] + .nav-menu { display: flex; flex-direction: column; margin: 0 0 6px 8px; padding-left: 10px; border-left: 2px solid var(--line); }
+  .nav-menu a { padding: 10px 8px; }
 }
 
 /* ---------- Hero / search ---------- */
@@ -418,7 +440,7 @@ mark { background: var(--red-soft); color: inherit; padding: 0 1px; border-radiu
 .lang-switch button { font: 600 var(--fs-xs)/1 var(--sans); color: var(--muted); background: transparent; border: 0; border-radius: 999px; padding: 7px 10px; cursor: pointer; letter-spacing: .03em; }
 .lang-switch button:hover { color: var(--navy); }
 .lang-switch button[aria-pressed="true"] { background: var(--navy); color: #fff; }
-@media (max-width: 1260px) {
+@media (max-width: 1080px) {
   .lang-switch { margin-left: auto; order: 2; }
   .nav-toggle { margin-left: 8px; order: 3; }
 }
@@ -604,8 +626,8 @@ html[lang="id"] .event-list p[lang="id"] { display: none; }
 .faq summary::after { content: ""; position: absolute; right: 20px; top: 50%; width: 9px; height: 9px; border-right: 2px solid var(--navy); border-bottom: 2px solid var(--navy); transform: translateY(-70%) rotate(45deg); transition: transform .2s ease; }
 .faq details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
 .faq details p { padding: 0 18px 18px; color: var(--muted); }
-/* Seven header items: tighten between the hamburger breakpoint and wide screens */
-@media (min-width: 1261px) and (max-width: 1440px) {
+/* Tighten the header between the hamburger breakpoint and wide screens */
+@media (min-width: 1081px) and (max-width: 1240px) {
   .site-header .wrap { gap: 20px; }
   .nav { gap: 0; }
   .nav a { padding: 8px 9px; }

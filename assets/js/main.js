@@ -17,13 +17,33 @@
       syncToggle();
     });
     nav.addEventListener("click", function (e) {
-      if (e.target.tagName === "A" && nav.classList.contains("open")) {
+      if (e.target.closest("a") && nav.classList.contains("open")) {
         nav.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
         syncToggle();
       }
     });
     syncToggle();
+  }
+
+  /* ---------- Services dropdown ---------- */
+  var drop = document.querySelector(".nav-drop");
+  if (drop) {
+    var setDrop = function (open) { drop.setAttribute("aria-expanded", String(open)); };
+    drop.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setDrop(drop.getAttribute("aria-expanded") !== "true");
+    });
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".nav-group")) setDrop(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && drop.getAttribute("aria-expanded") === "true") { setDrop(false); drop.focus(); }
+    });
+    // Links in the menu: close it after choosing (also for same-page anchors like /#journals)
+    document.querySelectorAll(".nav-menu a").forEach(function (a) {
+      a.addEventListener("click", function () { setDrop(false); });
+    });
   }
 
   var now = new Date();
